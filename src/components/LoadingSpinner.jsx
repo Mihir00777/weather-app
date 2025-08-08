@@ -1,7 +1,16 @@
-const LoadingSpinner = ({ message = "Loading..." }) => (
-  <div className="text-center my-8">
-    <div className="inline-block w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin mb-4"></div>
-    <p className="text-white text-lg font-medium">{message}</p>
-  </div>
-);
+import React from 'react';
+import { useTheme } from './ThemeProvider';
+
+const LoadingSpinner = () => {
+  const { isDark } = useTheme();
+  
+  return (
+    <div className="flex justify-center items-center py-8">
+      <div className={`animate-spin rounded-full h-12 w-12 border-b-2 ${
+        isDark ? 'border-blue-400' : 'border-white'
+      }`}></div>
+    </div>
+  );
+};
+
 export default LoadingSpinner;
