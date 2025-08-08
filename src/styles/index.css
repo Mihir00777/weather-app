@@ -1,9 +1,8 @@
-/* Global styles for the weather app */
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Custom animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -19,14 +18,12 @@
   animation: fade-in 0.6s ease-out;
 }
 
-/* Smooth transitions for theme changes */
 * {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
 
-/* Custom scrollbar for dark/light themes */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -44,7 +41,6 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Dark theme scrollbar */
 .dark ::-webkit-scrollbar-thumb {
   background: rgba(156, 163, 175, 0.3);
 }
@@ -53,20 +49,17 @@
   background: rgba(156, 163, 175, 0.5);
 }
 
-/* Focus styles for accessibility */
 button:focus,
 input:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Glass morphism effect enhancement */
 .glass-effect {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
-/* Custom gradient backgrounds */
 .bg-gradient-light {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -75,7 +68,6 @@ input:focus {
   background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0c0c0c 100%);
 }
 
-/* Responsive text sizing */
 @media (max-width: 640px) {
   .text-responsive-lg {
     font-size: 1.5rem;
@@ -86,7 +78,6 @@ input:focus {
   }
 }
 
-/* Loading animation enhancement */
 @keyframes pulse-glow {
   0%, 100% {
     opacity: 0.8;

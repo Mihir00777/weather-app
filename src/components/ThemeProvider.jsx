@@ -4,7 +4,6 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
-    // Get theme from localStorage or default to false (light mode)
     try {
       const saved = localStorage.getItem('theme');
       return saved ? JSON.parse(saved) : false;
@@ -15,7 +14,6 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // Save theme preference to localStorage whenever it changes
     try {
       localStorage.setItem('theme', JSON.stringify(isDark));
     } catch (error) {
