@@ -23,6 +23,8 @@ const WeatherApp = () => {
       setForecast(forecastRes.data.list);
     } catch (err) {
       setError('City not found or API error.');
+      setWeather(null);
+      setForecast([]);
     } finally {
       setLoading(false);
     }
